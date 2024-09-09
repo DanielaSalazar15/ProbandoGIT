@@ -1,0 +1,11 @@
+Se pudo Hacer la practica 
+Los pasos a seguir son los siguentes:
+1-. abrir power shell
+2-. Pegar el siguiente comando ssh-keygen -t rsa -b 4096 -c "your_email@example.com"
+3-. Abrir powershell como administrador y activar el servicio ssh con los siguientes comandos 
+Get - Service -Name ssh-agent | Set Service -StartupType Manual
+Start-Service ssh- agent 
+4-. En el powershell sin permisos administrativos, agregar la llave privada a la host de confianza
+ssh- add c:/Users/YOU/.ssh/id_ed25519
+5-. En el powershell copiar la clave publica, con el siguiente comando 
+cat c:/Users/YOU/.ssh/id_ed25519
